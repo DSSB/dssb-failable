@@ -1,0 +1,13 @@
+version='1.0.0'
+
+dependencies {
+    compile project(':failable-api')
+    
+    compile 'org.projectlombok:lombok:1.16.16'
+
+    //== Test ==
+    
+    testCompile project(':failable-spec')
+    
+    testCompile 'junit:junit:4.12'
+}
