@@ -19,6 +19,8 @@ import java.io.IOException;
 
 import org.junit.Test;
 
+import dssb.failable.FailableException;
+
 /**
  * These test ensure that the default implementation is as expceted.
  **/
@@ -29,7 +31,7 @@ public class DefaultFailableRunnableTest {
     
     @Test
     public void testRunGracefully_nonRuntimeException() {
-        spec.testRunGracefully_nonRuntimeException(()->{
+        spec.testRunGracefully_nonFailableException(()->{
             throw new IOException();
         });
     }
@@ -37,8 +39,8 @@ public class DefaultFailableRunnableTest {
     @Test
     
     public void testRunGracefully_runtimeException() {
-        spec.testRunGracefully_runtimeException(()->{
-            throw new NullPointerException();
+        spec.testRunGracefully_failableException(()->{
+            throw new FailableException(new NullPointerException());
         });
     }
     

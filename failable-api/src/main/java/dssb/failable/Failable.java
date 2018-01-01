@@ -69,7 +69,7 @@ public class Failable {
             return () -> {
                 try {
                     run();
-                } catch (RuntimeException t) {
+                } catch (FailableException t) {
                     throw t;
                 } catch (Throwable t) {
                     throw new FailableException(t);
@@ -138,7 +138,7 @@ public class Failable {
             return () -> {
                 try {
                     return get();
-                } catch (RuntimeException t) {
+                } catch (FailableException t) {
                     throw t;
                 } catch (Throwable t) {
                     throw new FailableException(t);
@@ -207,7 +207,7 @@ public class Failable {
             return v -> {
                 try {
                     accept(v);
-                } catch (RuntimeException t) {
+                } catch (FailableException t) {
                     throw t;
                 } catch (Throwable t) {
                     throw new FailableException(t);
@@ -277,7 +277,7 @@ public class Failable {
             return v -> {
                 try {
                     return apply(v);
-                } catch (RuntimeException t) {
+                } catch (FailableException t) {
                     throw t;
                 } catch (Throwable t) {
                     throw new FailableException(t);
