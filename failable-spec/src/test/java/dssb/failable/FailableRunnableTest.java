@@ -13,21 +13,22 @@
 //
 //  You may elect to redistribute this code under either of these licenses.
 //  ========================================================================
-package nawaman.failable;
+package dssb.failable;
 
 import java.io.IOException;
 
 import org.junit.Test;
 
 import dssb.failable.FailableException;
+import dssb.failable.FailableRunnableSpec;
 
 /**
- * In case, there are future diversion between the default implementation an this implementation
- * these tests ensure that they behave as expected.
+ * These test ensure that the default implementation is as expected.
+ * @author NawaMan <nawaman@dssb.io>
  **/
 @SuppressWarnings("javadoc")
 public class FailableRunnableTest {
-    
+
     private final FailableRunnableSpec spec = new FailableRunnableSpec();
     
     @Test
@@ -38,6 +39,7 @@ public class FailableRunnableTest {
     }
     
     @Test
+    
     public void testRunGracefully_runtimeException() {
         spec.testRunGracefully_failableException(()->{
             throw new FailableException(new NullPointerException());

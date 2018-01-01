@@ -1,4 +1,4 @@
-package nawaman.failable;
+package dssb.failable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -7,9 +7,9 @@ import dssb.failable.Failable;
 import dssb.failable.FailableException;
 
 /**
- * This spec helps document the desired behaviours of any Failable runnable.
+ * This spec helps document the desired behaviors of any Failable runnable.
  * 
- * @author manusitn
+ * @author NawaMan <nawaman@dssb.io>
  */
 public class FailableRunnableSpec {
     
