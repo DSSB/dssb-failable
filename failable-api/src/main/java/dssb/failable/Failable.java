@@ -34,16 +34,6 @@ public class Failable {
     public static interface Runnable<T extends Throwable> {
         
         /**
-         * Convenient factory method to allow lambda 
-         * 
-         * @param runnable 
-         * @return the failable runnable.
-         **/
-        public static <T extends Throwable> Runnable<T> of(Runnable<T> runnable) {
-            return runnable;
-        }
-        
-        /**
          * Run this runnable.
          * 
          * @throws T the thrown exception.
@@ -101,16 +91,6 @@ public class Failable {
      **/
     @FunctionalInterface
     public static interface Supplier<V, T extends Throwable> {
-        
-        /**
-         * Convenient factory method to allow lambda
-         *  
-         * @param supplier the failable supplier
-         * @return a failable supplier.
-         **/
-        public static <V, T extends Throwable> Supplier<V, T> of(Supplier<V, T> supplier) {
-            return supplier;
-        }
         
         /**
          * Run this supplier. 
@@ -172,16 +152,6 @@ public class Failable {
     public static interface Consumer<V, T extends Throwable> {
         
         /**
-         * Convenient factory method to allow lambda.
-         * 
-         * @param consumer  the failable consumer.
-         * @return  the failable consumer.
-         **/
-        public static <V, T extends Throwable> Consumer<V, T> of(Consumer<V, T> consumer) {
-            return consumer;
-        }
-        
-        /**
          * Run this consumer. 
          * 
          * @param value the accepted value.
@@ -239,16 +209,6 @@ public class Failable {
      **/
     @FunctionalInterface
     public static interface Function<V, R, T extends Throwable> {
-        
-        /**
-         * Convenient factory method to allow lambda.
-         * 
-         * @param function  the failable function.
-         * @return  the failable function.
-         **/
-        public static <V, R, T extends Throwable> Function<V, R, T> of(Function<V, R, T> function) {
-            return function;
-        }
         
         /**
          * Run this function. 

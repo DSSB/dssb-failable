@@ -19,7 +19,6 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import dssb.failable.FailableException;
 import dssb.failable.FailableRunnableSpec;
 
 /**
@@ -35,16 +34,16 @@ public class FailableRunnableTest {
     
     @Test
     public void testRunGracefully_nonRuntimeException() {
-        spec.testRunGracefully_nonFailableException(()->{
+        spec.testRunGracefully_nonFailableException(Failables.Runnable.of(()->{
             throw new IOException();
-        });
+        }));
     }
     
     @Test
     public void testRunGracefully_runtimeException() {
-        spec.testRunGracefully_failableException(()->{
+        spec.testRunGracefully_failableException(Failables.Runnable.of(()->{
             throw new FailableException(new NullPointerException());
-        });
+        }));
     }
     
 }

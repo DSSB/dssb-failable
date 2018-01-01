@@ -19,7 +19,6 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import dssb.failable.FailableException;
 import dssb.failable.FailableRunnableSpec;
 
 /**
