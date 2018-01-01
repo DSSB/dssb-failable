@@ -1,3 +1,3 @@
 # Failable
 
-Failable contains common functional interfaces that can trow exception.
+Failable contains common functional interfaces that can throw exception.
