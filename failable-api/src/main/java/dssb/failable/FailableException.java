@@ -18,7 +18,7 @@ package dssb.failable;
 /**
  * This exception wraps an exception from a failable.
  * 
- * @author NawaMan <nawaman@dssb.io>
+ * @author NawaMan -- nawaman@dssb.io
  */
 public class FailableException extends RuntimeException {
     

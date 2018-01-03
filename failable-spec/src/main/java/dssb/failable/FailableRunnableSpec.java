@@ -8,7 +8,7 @@ import dssb.failable.Failable;
 /**
  * This spec helps document the desired behaviors of any Failable runnable.
  * 
- * @author NawaMan <nawaman@dssb.io>
+ * @author NawaMan -- nawaman@dssb.io
  */
 public class FailableRunnableSpec {
     

@@ -18,7 +18,7 @@ package dssb.failable;
 /**
  * Failable actions.
  * 
- * @author NawaMan <nawaman@dssb.io>
+ * @author NawaMan -- nawaman@dssb.io
  */
 public class Failable {
     
