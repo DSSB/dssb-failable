@@ -1,7 +1,7 @@
-version='1.0.0'
+version="${theVersion}.0"
 
 dependencies {
-    compile     project(':failable-api')
+    compile     project(':dssb-failable-api')
     
     compile 'org.projectlombok:lombok:1.16.16'
     compile 'junit:junit:4.12'

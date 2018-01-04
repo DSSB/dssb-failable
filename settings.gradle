@@ -1,6 +1,6 @@
 
-include ":failable-api"
-include ":failable-impl"
-include ":failable-spec"
+include ":dssb-failable-api"
+include ":dssb-failable-impl"
+include ":dssb-failable-spec"
 
-rootProject.name = theName
+rootProject.name = theGroup

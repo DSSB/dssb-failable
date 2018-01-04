@@ -1,13 +1,13 @@
-version='1.0.0'
+version="${theVersion}.0"
 
 dependencies {
-    compile project(':failable-api')
+    compile project(':dssb-failable-api')
     
     compile 'org.projectlombok:lombok:1.16.16'
 
     //== Test ==
     
-    testCompile project(':failable-spec')
+    testCompile project(':dssb-failable-spec')
     
     testCompile 'junit:junit:4.12'
 }

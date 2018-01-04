@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>failable-spec</name>
-	<comment>Project failable-spec created by Buildship.</comment>
+	<name>dssb-failable-impl</name>
+	<comment>Project dssb-failable-impl created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
