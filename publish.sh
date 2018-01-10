@@ -1,3 +1,11 @@
 #!/bin/bash
 gradle clean build publishToMavenLocal
-cp -Rf  ~/.m2/repository/dssb-failable ../maven-repository
+
+PROJECTREPO=~/.m2/repository/dssb-failable
+PUBLISHREPO=../maven-repository
+
+if [ -d $PUBLISHREPO ]; then
+    cp -Rf $PROJECTREPO $PUBLISHREPO
+else
+    (>&2 echo "Publish repositoy does not exist!")
+fi
