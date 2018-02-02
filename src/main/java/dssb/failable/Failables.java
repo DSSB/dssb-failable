@@ -36,8 +36,10 @@ public class Failables {
         /**
          * Convenient factory method to allow lambda 
          * 
-         * @param runnable 
+         * @param runnable  the runnable.
          * @return the failable runnable.
+         * 
+         * @param <T>  the type of the thrown exception.
          **/
         public static <T extends Throwable> Runnable<T> of(Runnable<T> runnable) {
             return runnable;
@@ -59,6 +61,9 @@ public class Failables {
          *  
          * @param supplier the failable supplier
          * @return a failable supplier.
+         * 
+         * @param <V> the input data type.
+         * @param <T>  the type of the thrown exception.
          **/
         public static <V, T extends Throwable> Supplier<V, T> of(Supplier<V, T> supplier) {
             return supplier;
@@ -80,6 +85,9 @@ public class Failables {
          * 
          * @param consumer  the failable consumer.
          * @return  the failable consumer.
+         * 
+         * @param <V> the input data type.
+         * @param <T>  the type of the thrown exception.
          **/
         public static <V, T extends Throwable> Consumer<V, T> of(Consumer<V, T> consumer) {
             return consumer;
@@ -102,6 +110,10 @@ public class Failables {
          * 
          * @param function  the failable function.
          * @return  the failable function.
+         * 
+         * @param <V> the input data type.
+         * @param <R>  the returned data type.
+         * @param <T>  the type of the thrown exception.
          **/
         public static <V, R, T extends Throwable> Function<V, R, T> of(Function<V, R, T> function) {
             return function;
@@ -124,6 +136,11 @@ public class Failables {
          * 
          * @param function  the failable bifunction.
          * @return  the failable bifunction.
+         * 
+         * @param <V1> the input data type.
+         * @param <V2> the input data type.
+         * @param <R>  the returned data type.
+         * @param <T>  the type of the thrown exception.
          **/
         public static <V1, V2, R, T extends Throwable> BiFunction<V1, V2, R, T> of(BiFunction<V1, V2, R, T> function) {
             return function;

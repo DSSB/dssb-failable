@@ -27,7 +27,7 @@ public class FailableException extends RuntimeException {
     /**
      * Constructor 
      * 
-     * @param cause
+     * @param cause  the cause exception of this exception.
      **/
     public FailableException(Throwable cause) {
         super(cause);
