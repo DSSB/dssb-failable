@@ -108,4 +108,26 @@ public class Failables {
         }
     }
     
+    /**
+     * Failable bifunction.
+     * 
+     * @param <V1> the input data type.
+     * @param <V2> the input data type.
+     * @param <R>  the returned data type.
+     * @param <T>  the type of the thrown exception.
+     **/
+    @FunctionalInterface
+    public static interface BiFunction<V1, V2, R, T extends Throwable> extends Failable.BiFunction<V1, V2, R, T>  {
+        
+        /**
+         * Convenient factory method to allow lambda.
+         * 
+         * @param function  the failable bifunction.
+         * @return  the failable bifunction.
+         **/
+        public static <V1, V2, R, T extends Throwable> BiFunction<V1, V2, R, T> of(BiFunction<V1, V2, R, T> function) {
+            return function;
+        }
+    }
+    
 }

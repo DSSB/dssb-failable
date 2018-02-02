@@ -15,11 +15,14 @@
 //  ========================================================================
 package dssb.failable;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.IOException;
 
 import org.junit.Test;
 
-import dssb.failable.FailableRunnableSpec;
+import dssb.failable.Failable.BiFunction;
+import lombok.val;
 
 /**
  * In case, there are future diversion between the default implementation an this implementation
@@ -44,6 +47,18 @@ public class FailableRunnableTest {
         spec.testRunGracefully_failableException(Failables.Runnable.of(()->{
             throw new FailableException(new NullPointerException());
         }));
+    }
+    
+    @Test
+    public void testCurrying() {
+        val division = (BiFunction<Integer, Integer, Integer, RuntimeException>)(a,b)->a / b;
+        assertEquals(5, division.of(10).of(2).intValue());
+        
+        val half = division.flip().asFunctionFor(2);
+        assertEquals(5, half.of(10).intValue());
+        
+        val halfOf10 = half.asSupplierFor(10);
+        assertEquals(5, halfOf10.value().intValue());
     }
     
 }
