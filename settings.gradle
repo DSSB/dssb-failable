@@ -1,6 +1,2 @@
 
-include ":dssb-failable-api"
-include ":dssb-failable-impl"
-include ":dssb-failable-spec"
-
 rootProject.name = theGroup
